@@ -4,6 +4,12 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PSCaseStudy.Extensions;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,10 +29,17 @@ namespace PSCaseStudy
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //TODO : Db Connection extensions
-            //TODO : Configruation extensions
-            //TODO : RegisterServices extensions
-            services.AddMvc();
+            //initialize config options
+            services.ConfigureOptions(Configuration);
+            services.AddServiceTool();
+
+            //initialize db
+            services.AddPostgreDbContext();
+            services.AddMappers();
+
+            //initialize business tier
+            services.RegisterBusiness();
+            services.AddControllersWithViews();
             services.AddRazorPages();
         }
 
@@ -53,6 +66,7 @@ namespace PSCaseStudy
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers();
                 endpoints.MapRazorPages();
             });
         }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eren_\\OneDrive\\Documents\\popupsmart_casestudy\\PSCaseStudy\\PSCaseStudy\\PSCaseStudy.csproj": {}
+    "C:\\Users\\oguzhan.duran\\Documents\\popupsmart_casestudy\\PSCaseStudy\\PSCaseStudy\\PSCaseStudy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eren_\\OneDrive\\Documents\\popupsmart_casestudy\\PSCaseStudy\\PSCaseStudy\\PSCaseStudy.csproj": {
+    "C:\\Users\\oguzhan.duran\\Documents\\popupsmart_casestudy\\PSCaseStudy\\PSCaseStudy\\PSCaseStudy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eren_\\OneDrive\\Documents\\popupsmart_casestudy\\PSCaseStudy\\PSCaseStudy\\PSCaseStudy.csproj",
+        "projectUniqueName": "C:\\Users\\oguzhan.duran\\Documents\\popupsmart_casestudy\\PSCaseStudy\\PSCaseStudy\\PSCaseStudy.csproj",
         "projectName": "PSCaseStudy",
-        "projectPath": "C:\\Users\\eren_\\OneDrive\\Documents\\popupsmart_casestudy\\PSCaseStudy\\PSCaseStudy\\PSCaseStudy.csproj",
-        "packagesPath": "C:\\Users\\eren_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eren_\\OneDrive\\Documents\\popupsmart_casestudy\\PSCaseStudy\\PSCaseStudy\\obj\\",
+        "projectPath": "C:\\Users\\oguzhan.duran\\Documents\\popupsmart_casestudy\\PSCaseStudy\\PSCaseStudy\\PSCaseStudy.csproj",
+        "packagesPath": "C:\\Users\\oguzhan.duran\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\oguzhan.duran\\Documents\\popupsmart_casestudy\\PSCaseStudy\\PSCaseStudy\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\eren_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\oguzhan.duran\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,36 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "MessagePack.Annotations": {
+              "target": "Package",
+              "version": "[2.4.35, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.26, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.1.26, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.1.18, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -57,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,10 +1,38 @@
 ﻿@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
+@using PSCaseStudy.Datas.Dtos
+@using PSCaseStudy.Datas.Enums
+@model IntegrationItemsDto
 
+<style>
+
+    .form-group {
+        text-align: left;
+    }
+</style>
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="col-12">
+        <form asp-controller="IntegrationItem" method="post" asp-action="AddItem">
+
+            <div class="form-group">
+                <label for="ApiUrl">Api Url:</label>
+                 @Html.EditorFor(model => model.ApiUrl)
+                @*<input class="form-control" for="userCode" name="apiUrl" autofocus />*@
+            </div>
+            <div class="form-group">
+                <label for="userCode">Api Key:</label>
+                 @Html.EditorFor(model => model.ApiKey)
+            </div>
+            <div class="form-group">
+                @foreach (var radiotext in  Enum.GetValues(typeof(IntegrationApplicationEnum)))
+                {
+                    @Html.RadioButtonFor(m=>m.IntegrationApplication, radiotext.ToString())
+                    @radiotext.ToString()
+                }
+
+            </div>
+                <button >Submit</button>
+        </form>
+    </div>
 </div>
